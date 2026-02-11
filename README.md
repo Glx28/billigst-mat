@@ -6,7 +6,7 @@
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Tests](https://github.com/YOUR_USERNAME/billigst-mat/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/billigst-mat/actions)
+[![Tests](https://github.com/Glx28/billigst-mat/actions/workflows/ci.yml/badge.svg)](https://github.com/Glx28/billigst-mat/actions)
 
 ---
 
@@ -112,18 +112,18 @@
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/billigst-mat.git
+git clone https://github.com/Glx28/billigst-mat.git
 cd billigst-mat
 
 # Create virtual environment
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate  # Linux/Mac
 # .venv\Scripts\activate   # Windows
 
 # Install dependencies
-pip install -e .
+pip install -r requirements.txt
 
-# Install Playwright browsers
+# Install Playwright browsers (required for Oda scraping)
 playwright install chromium
 ```
 
@@ -157,10 +157,10 @@ python -m src.main
 # Holdbart-only mode
 python -m src.main --holdbart
 # or
-python run_holdbart.py
+python scripts/run_holdbart.py
 
 # Verify online store scrapers work
-python verify_stores.py
+python scripts/verify_stores.py
 ```
 
 ---
@@ -182,8 +182,13 @@ billigst-mat/
 │   ├── ranking.py        # Price ranking & triggers
 │   └── url_validator.py  # Kassal URL validation
 ├── config/
-│   └── groups.yaml       # Product category definitions
+│   ├── groups.yaml       # Product category definitions
+│   └── online_store_links.txt  # Store URLs to scrape
+├── scripts/
+│   ├── run_holdbart.py   # Convenience: Holdbart-only mode
+│   └── verify_stores.py  # Test online store scrapers
 ├── tests/                # Pytest test suite
+├── docs/                 # Documentation
 ├── data/                 # Runtime data (DB, cache)
 └── pyproject.toml        # Project configuration
 ```

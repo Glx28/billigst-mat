@@ -54,12 +54,12 @@ GEO_RADIUS = os.getenv("GEO_RADIUS", "30000")  # 30 km
 
 
 def load_store_urls() -> dict[str, list[str]]:
-    """Load online store URLs from online_store_links.txt.
+    """Load online store URLs from config/online_store_links.txt.
 
     Returns dict mapping store names to lists of URLs.
     Example: {"oda": ["https://oda.com/...", ...], "spar": [...]}
     """
-    links_file = BASE_DIR / "online_store_links.txt"
+    links_file = BASE_DIR / "config" / "online_store_links.txt"
     if not links_file.exists():
         return {}
 

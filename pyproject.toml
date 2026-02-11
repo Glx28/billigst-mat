@@ -21,10 +21,6 @@ dependencies = [
     "python-dotenv>=1.0",
     "beautifulsoup4>=4.12",
     "playwright>=1.40",
-]
-
-[project.optional-dependencies]
-dev = [
     "pytest>=8.0",
     "pytest-cov>=4.0",
     "ruff>=0.3",
@@ -34,7 +30,7 @@ dev = [
 billigst-mat = "src.main:main"
 
 [project.urls]
-Repository = "https://github.com/YOUR_USERNAME/billigst-mat"
+Repository = "https://github.com/Glx28/billigst-mat"
 
 [build-system]
 requires = ["setuptools>=68"]

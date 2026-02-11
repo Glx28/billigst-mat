@@ -6,7 +6,7 @@ Supported stores:
 - Joker (via ngdata API, store_id=1220)
 - Oda (via Playwright DOM scraping)
 
-URLs from online_store_links.txt are parsed to determine which categories
+URLs from config/online_store_links.txt are parsed to determine which categories
 to fetch from each store's API.
 """
 
