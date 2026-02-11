@@ -1,0 +1,54 @@
+[project]
+name = "billigst-mat"
+version = "1.0.0"
+description = "Norwegian grocery price tracker — cheapest per unit across stores"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+keywords = ["grocery", "price-tracker", "norway", "scraping", "api"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+]
+dependencies = [
+    "httpx>=0.27",
+    "pyyaml>=6.0",
+    "python-dotenv>=1.0",
+    "beautifulsoup4>=4.12",
+    "playwright>=1.40",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.3",
+]
+
+[project.scripts]
+billigst-mat = "src.main:main"
+
+[project.urls]
+Repository = "https://github.com/YOUR_USERNAME/billigst-mat"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"
+addopts = "-v --tb=short"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W"]
+ignore = ["E501"]

@@ -1,0 +1,27 @@
+# eTilbudsavis Publish Schedule
+# When each store's weekly flyer typically becomes available.
+# Use this to schedule scraping runs.
+
+# Store               Day          Local time   UTC publish
+# ─────────────────── ──────────── ────────── ──────────────────
+# Obs                 Saturday     19:00        2026-02-07T18:00Z
+# Coop Extra          Saturday     22:00        2026-02-07T21:00Z
+# Coop Prix           Saturday     22:00        2026-02-07T21:00Z
+# Matkroken           Saturday     22:00        2026-02-07T21:00Z
+# Coop Mega           Saturday     22:35        2026-02-07T21:35Z
+# SPAR                Sunday       00:00        2026-02-07T23:00Z
+# MENY                Sunday       00:05        2026-02-07T23:05Z
+# Gigaboks            Sunday       00:00        2026-02-07T23:00Z
+# Jacobs              Sunday       02:32        2026-02-08T01:32Z
+# KIWI                Sunday       08:00        2026-02-08T07:00Z
+# REMA 1000           Sunday       08:01        2026-02-08T07:01Z
+# Joker               Monday       06:00        2026-02-09T05:00Z
+# Nærbutikken         (varies)     ~11:15       (longer/monthly flyer)
+# Holdbart            Wednesday    08:30        2026-02-11T07:30Z
+
+# Recommended cron schedule:
+#   Normal run (all except Holdbart): Sunday 10:00 UTC
+#     0 10 * * 0  cd /path/to/food-alert && python -m src.main
+#
+#   Holdbart run: Wednesday 09:00 UTC
+#     0 9 * * 3   cd /path/to/food-alert && python -m src.main --holdbart

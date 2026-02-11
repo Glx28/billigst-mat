@@ -1,0 +1,205 @@
+groups:
+  # ── Egg ──────────────────────────────────────────────
+  - name: egg
+    display_name: "🥚 Egg"
+    base_unit: piece
+    search_terms: ["egg 12", "egg 18", "egg frittgående"]
+    include_any: ["egg"]
+    exclude: ["pålegg", "proteinbar", "sjokolade", "eggedosis", "egglikør", "nudel"]
+    kassal_category: "egg"
+    threshold: null
+
+  # ── Melk ─────────────────────────────────────────────
+  - name: melk
+    display_name: "🥛 Melk"
+    base_unit: liter
+    search_terms: ["helmelk", "lettmelk", "skummetmelk", "melk"]
+    include_any: ["melk", "helmelk", "lettmelk", "skummet"]
+    exclude: ["sjokolade", "yoghurt", "kefir", "kakao", "shake", "fløte", "rømme",
+              "ost", "pulver", "erstatning", "havre", "soya", "mandel", "kokos",
+              "kondensert", "kokosmelk", "havremelk", "mandelmelk", "rismelk"]
+    kassal_category: null
+    threshold: null
+
+  # ── Kyllingfilet ─────────────────────────────────────
+  - name: kyllingfilet
+    display_name: "🍗 Kyllingfilet"
+    base_unit: kilogram
+    search_terms: ["kyllingfilet", "kyllingbryst"]
+    include_any: ["kyllingfilet", "kyllingbryst", "kylling filet"]
+    exclude: ["pålegg", "salami", "pepperoni", "pølse", "bacon", "servelat", "postei",
+              "nuggets", "panert", "skivet", "dogman", "hundemat", "hundesnacks", "spyd",
+              "sous vide", "ferdigretter", "ferdigmåltid", "urtesaus", "pancetta",
+              "salatkjøtt", "mild&snill", "bøkerøkt", "basilikum", "paprika",
+              "pepper/hvitløk", "pestomar", "røkt", "naturell 110", "naturell 100",
+              "pr stykk", "pr. stykk", "pr stk", "burger", "80g", "80 g",
+              "spiseklar", "plegg", "stressless", "møbelringen", "stol",
+              "hvilestol", "sofa", "seng", "stekt", "marinert", "chili", "teriyaki",
+              "spyd", "grillspyd"]
+    exclude_category: ["kjøttpålegg", "pålegg", "hundemat", "ferdigmåltid", "ferdigretter", "grillspyd"]
+    kassal_category: null
+    threshold: 120
+
+  # ── Kyllinglår ───────────────────────────────────────
+  - name: kyllinglar
+    display_name: "🍗 Kyllinglår"
+    base_unit: kilogram
+    search_terms: ["kyllinglår", "kyllingklubber"]
+    include_any: ["kyllinglår", "kyllingklubber", "lårklubber", "lår"]
+    exclude: ["pålegg", "salami", "pølse", "salatkjøtt", "pr stykk", "pr. stykk",
+              "pr stk", "grillet pr", "hundesnacks", "hundemat", "engrosnett",
+              "5kg"]
+    exclude_category: ["kjøttpålegg", "pålegg", "hundemat", "ferdigmåltid"]
+    kassal_category: null
+    threshold: null
+
+  # ── Kylling kjøttdeig ────────────────────────────────
+  - name: kylling_kjottdeig
+    display_name: "🍗 Kylling kjøttdeig"
+    base_unit: kilogram
+    search_terms: ["kylling kjøttdeig", "kyllingkjøttdeig", "kjøttdeig kylling"]
+    include_any: ["kyllingkjøttdeig", "kylling kjøttdeig", "kjøttdeig kylling", "kjøttdeig av kylling"]
+    exclude: ["pålegg", "pølse", "storfe", "svin", "lam", "hundesnacks", "hundemat",
+              "kyllingskrog", "skrog", "kraftben", "vinger",
+              "kjøttboller", "kjøttkake", "nuggets", "panert", "burger",
+              "hel kylling", "hel ", "grillet", "medisterfarse", "medister"]
+    kassal_category: null
+    threshold: 120
+
+  # ── Foredlede kyllingprodukter ───────────────────────
+  - name: foredlet_kylling
+    display_name: "🍗 Foredlede kyllingprodukter"
+    base_unit: kilogram
+    top_n: 6
+    search_terms: ["kyllingnuggets", "kyllingboller", "kyllingburger",
+                   "kyllingpølse", "kylling hel", "kyllingvinger",
+                   "kyllingkjøttboller"]
+    include_any: ["nuggets", "kjøttboller", "kyllingboller", "kyllingburger",
+                  "burger", "pølse", "kyllingpølse", "hel kylling", "hel ",
+                  "vinger", "vingemiks",
+                  "grillet", "panert", "schnitzel", "wok"]
+    exclude: ["hundesnacks", "hundemat", "pålegg", "salami", "leverpostei",
+              "kjøttdeig", "filet", "bryst", "lår", "klubbe", "skrog", "kyllingskrog",
+              "svinekjøtt", "lam ", "engrosnett", "saus", "brød"]
+    kassal_category: null
+    threshold: null
+
+  # ── Svin kjøttdeig ──────────────────────────────────
+  - name: svin_kjottdeig
+    display_name: "🥩 Svin kjøttdeig"
+    base_unit: kilogram
+    search_terms: ["kjøttdeig svin", "svinekjøttdeig"]
+    include_any: ["kjøttdeig", "deig"]
+    exclude: ["pålegg", "pølse", "kylling", "storfe", "lam", "hundesnacks", "hundemat",
+              "soya", "vegetar", "proteinrik", "medisterfarse", "medister"]
+    kassal_category: null
+    threshold: null
+
+  # ── Svinekjøtt ──────────────────────────────────────
+  - name: svin
+    display_name: "🥩 Svinekjøtt"
+    base_unit: kilogram
+    search_terms: ["svinekotelett", "ribbe", "svinebog", "svinefilet", "svinenakke"]
+    include_any: ["kotelett", "ribbe", "bog", "skinke", "nakke", "filet", "ytrefilet", "svin"]
+    exclude: ["pålegg", "spek", "salami", "servelat", "pølse", "leverpostei",
+              "burger", "biffburger", "strimler kylling", "hundesnacks", "hundemat",
+              "ribbesaus", "ribbefett", "ribbekrydder", "kjøttdeig", "knoke",
+              "engrosnett", "kraftben", "ister"]
+    kassal_category: null
+    threshold: null
+
+  # ── Storfe kjøttdeig ────────────────────────────────
+  - name: storfe_kjottdeig
+    display_name: "🥩 Storfe kjøttdeig"
+    base_unit: kilogram
+    search_terms: ["kjøttdeig storfe", "kjøttdeig"]
+    include_any: ["deig"]
+    exclude: ["pålegg", "salami", "pepperoni", "pølse", "speket", "kylling",
+              "svin", "biffstrimler", "biffburger", "soya", "hundesnacks", "hundemat",
+              "vegetar", "proteinrik", "lam", "karbonade", "medisterfarse", "medister",
+              "grandiosa", "pizza", "ferdigrett", "ferdigmåltid", "grønnsaker",
+              "hval", "saus", "spaghetti", "barnemat", "taco", "tortilla"]
+    kassal_category: null
+    threshold: null
+
+  # ── Annen kjøttdeig ─────────────────────────────────
+  - name: annen_kjottdeig
+    display_name: "🥩 Annen kjøttdeig & farse"
+    base_unit: kilogram
+    search_terms: ["kjøttdeig", "medisterfarse", "farse"]
+    include_any: ["kjøttdeig", "deig", "medisterfarse", "farse"]
+    exclude: ["kylling", "svin", "storfe", "pålegg", "pølse", "hundesnacks", "hundemat",
+              "soya", "vegetar", "proteinrik", "lam",
+              "grandiosa", "pizza", "ferdigrett", "ferdigmåltid", "grønnsaker",
+              "hval", "saus", "spaghetti", "barnemat", "taco", "tortilla"]
+    kassal_category: null
+    threshold: null
+
+  # ── Storfe biff / stykker ───────────────────────────
+  - name: storfe_biff
+    display_name: "🥩 Storfe biff & stykker"
+    base_unit: kilogram
+    search_terms: ["biff storfe", "ytrefilet storfe", "høyrygg", "entrecote"]
+    include_any: ["biff", "ytrefilet", "høyrygg", "entrecote", "grytekjøtt"]
+    exclude: ["pålegg", "salami", "pepperoni", "pølse", "speket",
+              "burger", "biffburger", "svin", "kylling", "hundesnacks", "hundemat",
+              "biffgryte", "ferdigrett", "engrosnett", "5kg"]
+    kassal_category: null
+    threshold: null
+
+  # ── Foredlede kjøttprodukter ────────────────────────
+  - name: foredlet_kjott
+    display_name: "🍖 Foredlede kjøttprodukter"
+    base_unit: kilogram
+    top_n: 6
+    search_terms: ["karbonader", "kjøttkaker", "schnitzel", "nuggets kylling",
+                   "kjøttpølse", "medisterkaker", "frikadeller", "pølser",
+                   "wienerpølse", "kyllingpølse", "pannebiff", "kjøttboller",
+                   "hamburger", "pulled pork", "ribbe ferdig", "svineknoke"]
+    include_any: ["karbonade", "kjøttkake", "schnitzel", "snitzler", "nuggets",
+                  "medisterkake", "frikadelle", "kjøttpølse", "wienerpølse",
+                  "kyllingpølse", "pølser", "pølse", "pannebiff", "kjøttboller",
+                  "hamburger", "pulled", "svineknoke", "knoke", "spareribs"]
+    exclude: ["pålegg", "hundemat", "hundesnacks", "salami", "servelat", "speket",
+              "leverpostei", "brød", "saus", "dressing", "pølsebrød", "korvbrød",
+              "ketchup", "sennep", "engrosnett"]
+    kassal_category: null
+    threshold: null
+
+  # ── Laksefilet ──────────────────────────────────────
+  - name: laksefilet
+    display_name: "🐟 Laksefilet"
+    base_unit: kilogram
+    search_terms: ["laksefilet", "laks fersk", "laks lenke", "laks u/skinn", "ørretfilet"]
+    include_any: ["laksefilet", "laks", "ørretfilet", "ørret"]
+    exclude: ["pålegg", "røkt", "røkelaks", "gravet", "sushi", "hundemat", "hundesnacks",
+              "lakseolje", "fiskemat", "fiskekake", "fiskebolle", "postei",
+              "pepperlaks", "teriyaki", "lakseburger", "engrosnett",
+              "marinert", "chili", "mango", "pesto", "hasselnøtt",
+              "focaccia", "brød", "wok", "nudel",
+              "scampi", "reker", "einerrøkt", "skivet", "bit "]
+    kassal_category: null
+    threshold: null
+
+  # ── Foredlede fiskeprodukter ────────────────────────
+  - name: foredlet_fisk
+    display_name: "🐠 Foredlede fiskeprodukter"
+    base_unit: kilogram
+    top_n: 6
+    search_terms: ["fiskekaker", "fiskeboller", "fiskegrateng", "panert fisk",
+                   "fish and chips", "fiskepinner", "backfisch",
+                   "torskeburger", "fiskeburger"]
+    include_any: ["fiskekake", "fiskebolle", "fiskegrateng", "panert", "fiskepinner",
+                  "backfisch", "fish and chips", "fiskeburger", "torskeburger",
+                  "fish & chips"]
+    exclude: ["hundemat", "hundesnacks", "saus", "dressing", "brød",
+              "fiskeboller i kraft"]
+    kassal_category: null
+    threshold: null
+
+notify:
+  top_n: 3
+  triggers:
+    - new_best_per_group
+    - enters_top_n
+    - below_threshold
